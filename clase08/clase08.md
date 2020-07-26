@@ -211,6 +211,12 @@ else:
 
 ```python
 def is_reverse(word1, word2):
+  '''
+  Revisa si dos palabras son la misma palabra pero en reversa.
+
+  word1: String
+  word2: String
+  '''
   if len(word1) != len(word2):
     return False
   i = 0
@@ -241,7 +247,7 @@ Un step size de -1 va desde atrás hacia adelante, así el slice [::-1] genera l
 - [ ] Usa esta característica para escribir una versión de la función `is_palindrome` pero de una línea.
 
 ---
-2. Lee la documentación de las métodos de str: `strip` y `replace` desde el intérprete o desde la documentación de Python en línea. Puedes consultar la documentación con `help`:
+2. Lee la documentación de los métodos de str: `strip` y `replace` desde el intérprete o desde la documentación de Python en línea. Puedes consultar la documentación con `help`:
 ```python
 help(str.strip)
 ```
@@ -251,7 +257,7 @@ help(str.strip)
 **Consejo:** La documentación usa una sintaxis que puede confundir. Por ejemplo `find(sub[, start[, end]])`, los corchetes indican que es un argumento opcional. Por lo tanto `sub` es requerido, pero `start` es opcional, y si `start` es proporcionado, entonces `end` es opcional.
 
 ---
-3. Las siguientes funciones están pensadas para revisar si un string contiene algunas letra en minúscula, pero algunas de estas funciones son incorrectas.
+3. Las siguientes funciones están pensadas para revisar si un string contiene alguna letra en minúscula, pero algunas de estas funciones son incorrectas.
 
 - [ ] Para cada una de las funciones, describe qué hace realmente la función (asumiendo que el parámetro es de tipo string).
 
