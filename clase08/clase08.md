@@ -304,6 +304,6 @@ def any_lowercase5(s):
 
 - [ ] Escribe una función llamada `rotate_word` que tome un string y un entero como parámetros, y que retorne una nueva string que contenga las letras de la cadena original "rotadas" por el entero proporcionado.
 
-Por ejemplo "cheer" rotada por 7 es "jolly", y "melon" rotado por 10 es "cubed".
+Por ejemplo `"cheer"` rotada por `7` es `"jolly"`, y `"melon"` rotado por `-10` es `"cubed"`.
 
 **Consejo:** Puedes usar las funciones `ord` que convierte un caracter a su código numérico y `chr` que convierte códigos numéricos a caracteres. **No es necesario manejar acentos ni la letra 'ñ'**
