@@ -79,7 +79,7 @@ print(s[:3])
 print(s[3:])
 ```
 
-  4. ¿Qué pasa si `n >= n`?
+  4. ¿Qué pasa si `n >= m`?
 
     ```python
 print(s[3:1])
