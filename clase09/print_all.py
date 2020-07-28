@@ -3,4 +3,5 @@ file_name = "words.txt"
 fin = open(file_name)
 for line in fin:
     word = line.strip()
-    print(word)
+    if len(word) > 20:
+        print(word)
