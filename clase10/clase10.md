@@ -481,3 +481,53 @@ print(rest)
 ---
 
 ## Tarea:
+
+1. Escribe una función llamada `nested_sum` que tome una lista de listas de enteros y sume todos los elementos de todas las listas anidadas. Por ejemplo:
+
+```python
+t = [[1, 2], [3], [4, 5, 6]]
+print(nested_sum(t))
+# 21
+```
+
+2. Escribe una función llamada `cumsum` que tome una lista de números y regresa la suma acumulativa, es decir, una lista nueva donde el i-ésimo elemento es la suma de los primeros i elementos de la lista original. Por ejemplo:
+
+```python
+t = [1, 2, 3]
+print(cumsum(t))
+# [1, 3, 6]
+```
+
+3. Escribe una función llamada `middle` que tome una lista y regrese una nueva lista que contenga todos los elementos menos el primero y el último. Por ejemplo:
+
+```python
+t = [1, 2, 3, 4]
+print(middle(t))
+# [2, 3]
+```
+
+4. Escribe una función llamada `chop` que tome una lista y la modifique eliminando el primer y el último elemento, y que regrese `None`. Por ejemplo:
+
+```python
+t = [1, 2, 3, 4]
+chop(t)
+print(t)
+# [2, 3]
+```
+
+5. Escribe una función llamada `is_sorted` que tome una lista como parámetro y regrese `True` si la lista está ordenada en forma ascendente y `False` en otro caso. Por ejemplo:
+
+```python
+print(is_sorted([1, 2, 2]))
+# True
+
+print(is_sorted(['b', 'a']))
+# False
+```
+
+6. Dos palabras son anagramas si puedes reordenar las letras de una para obtener la otra. Escribe una función llamada `is_anagram` que tome dos strings y regrese `True` si los strings son anagramas.
+
+7. Escribe una función llamada `has_duplicates` que tome una lista y regrese `True` si hay algún elemento que aparezca más de una vez. No modifiques la lista original.
+
+8. Este ejercicio está basado en la [Paradoja del cumpleaños](https://es.wikipedia.org/wiki/Paradoja_del_cumplea%C3%B1os).
+Si hay 23 estudiantes en tu clase, ¿cuáles es la probabilidad de que dos de ustedes cumplan años el mismo día? Puedes estimar esta probabilidad generando 23 ejemplares de cumpleaños y comprobando si hay dos cumpleaños iguales. **Pista:** puedes generar enteros aleatorios con la función `randint` del módulo `random`.
