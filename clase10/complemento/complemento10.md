@@ -6,6 +6,7 @@
 
 - [ ] Escribe una función que lea el archivo `words.txt` y construya una lista donde cada elemento sea una palabra.
 
+---
 ### Ej. 2:
 
 Para comprobar si un elemento está en una lista o no, podrías usar el operador `in`, pero sería lento porque busca atraves de las palabras en orden.
@@ -16,6 +17,7 @@ De este modo, disminuyes el espacio de búsqueda a la mitad. Si la lista tiene 1
 
 - [ ] Escribe una función llamada `in_bisect` que tome una **lista ordenada** y una palabra a buscar, regresa `True` si la palabra está en la lista, `False` si no lo está. O podrías leer la documentación del módulo `bisect` y usar eso.
 
+---
 ### Ej. 3:
 
 Dos palabras son un 'par reversible' si cada una es la reversa de la otra. Por ejemplo:
@@ -26,3 +28,10 @@ Dos palabras son un 'par reversible' si cada una es la reversa de la otra. Por e
 
 
 - [ ] Escribe un programa que encuentre todos los pares reversibles en la lista de palabras.
+
+---
+## Ej. 4:
+
+Dos palabras se "entrecruzan" si tomando letras alternadas de cada una se forma una nueva palabra. Por ejemplo "shoe" y "cold" se entrecruzan para formar "schooled".
+
+- [ ] Escribe un programa que encuentre todos los pares de palabras que se entrecruzan. Pista: No busques entre todos los posibles pares de palabras. 
