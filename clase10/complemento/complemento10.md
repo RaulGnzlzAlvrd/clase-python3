@@ -20,7 +20,7 @@ De este modo, disminuyes el espacio de búsqueda a la mitad. Si la lista tiene 1
 ---
 ### Ej. 3:
 
-Dos palabras son un 'par reversible' si cada una es la reversa de la otra. Por ejemplo:
+Dos palabras son un **"par reversible"** si cada una es la reversa de la otra. Por ejemplo:
 
 - 'keep' y 'peek'
 - 'dog' y 'god'
@@ -32,6 +32,6 @@ Dos palabras son un 'par reversible' si cada una es la reversa de la otra. Por e
 ---
 ## Ej. 4:
 
-Dos palabras se "entrecruzan" si tomando letras alternadas de cada una se forma una nueva palabra. Por ejemplo "shoe" y "cold" se entrecruzan para formar "schooled".
+Dos palabras se **"entrecruzan"** si tomando letras alternadas de cada una se forma una nueva palabra. Por ejemplo "shoe" y "cold" se entrecruzan para formar "schooled".
 
-- [ ] Escribe un programa que encuentre todos los pares de palabras que se entrecruzan. Pista: No busques entre todos los posibles pares de palabras. 
+- [ ] Escribe un programa que encuentre todos los pares de palabras que se entrecruzan. Pista: No busques entre todos los posibles pares de palabras.
