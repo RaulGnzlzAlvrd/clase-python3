@@ -81,3 +81,51 @@ print((0, 1, 2000000) < (0, 3, 4))
 
 ---
 ### 2. Asignaciones en modo tupla
+
+1. Hacer swap en dos variables:
+
+```python
+temp = a
+a = b
+b = temp
+```
+
+2. Tuple assignment:
+
+```python
+# Las expresiones son evaluadas antes de la asignación
+a, b = b, a
+
+# Deben de coincidir en número
+a, b = 1, 2, 3
+# ValueError: too many values to unpack
+```
+
+> **Nota:** Diferencia cuando son tuplas de un elemento:
+> ```python
+> t, = 1,
+> print(t)
+> # 1
+> ```
+>
+> ```python
+> t = 1,
+> print(t)
+> # (1,)
+> ```
+
+3. El lado derecho puede ser cualquier sequencia.
+
+```python
+addr = 'monty@python.org'
+uname, domain = addr.split('@') # split() nos da una lista
+
+print(uname)
+# monty
+
+print(domain)
+# python.org
+```
+
+---
+### 3. Regresar tuplas desde funciones
