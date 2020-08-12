@@ -227,6 +227,7 @@ d[t] = 'oops'
 
 3. Funciones hash y tipos mutables
 
+---
 ### 6. Memorización
 
 1. Ejemplo: fibonacci
@@ -242,6 +243,7 @@ def fibonacci(n):
   return res
 ```
 
+---
 ### 7. Variables globales
 
 1. **Variables globales**: Declaración de variables fuera de funciones, se puede acceder a ellas desde cualquier función.
@@ -268,3 +270,57 @@ def example2():
   global been_called
   been_called = True
 ```
+
+4. Otro ejemplo:
+
+```python
+count = 0
+
+def example3():
+  count += 1
+# UnboundLocalError: local variable 'count' referenced before assignment
+
+def example3():
+  global count
+  count += 1
+```
+
+5. Modificando tipos mutables
+
+```python
+known = {0:0, 1:1}
+
+def example4():
+  known[2] = 1
+```
+
+6. Reasignar variables globales (mutables)
+
+```python
+known = {0:0, 1:1}
+
+def example5():
+  global known
+  known = dict()
+```
+
+---
+### 8. Debugging
+
+1. Disminuir el tamaño de los ejemplos.
+2. Revisar el tipo de los parámetros y argumentos.
+
+---
+## Tarea:
+
+### Ej. 01:
+Escribe una función que lea las palabras en `words.txt` y lo almacene como keys en un diccionario. No importa cuál sea su value. Después de eso puedes usar el operador `in` de diccionarios para revisar si una palabra está en el diccionario.
+
+### Ej. 02:
+Lee la documentación del método de diccionarios `setdefault` y usalo para escribir una versión más concisa de la función `invert_dict` vista durante la clase.
+
+### Ej. 03:
+Usa un diccionario para implementar una versión más simple y veloz de la función `has_duplicates` de la tarea anterior. El argumento de la función debe seguir siendo una lista.
+
+### Ej. 04:
+Dos palabras son **"pares rotados"** si puedes rotar una de ellas y obtener la otra (rotarlas como con el ejercicio de ROT13). Escribe una función que lea el documento con las palabras y encuentre todos los pares rotados.
