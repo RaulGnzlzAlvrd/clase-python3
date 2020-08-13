@@ -129,3 +129,37 @@ print(domain)
 
 ---
 ### 3. Regresar tuplas desde funciones
+
+1. Regresar una tupla como valor es igual a regresar multiples valores.
+
+2. Calcular el cociente y el residuo de una división:
+
+```python
+quot = x // y
+rem = x % y
+```
+
+3. Alternativa con `divmod`:
+
+```python
+t = divmod(7, 3)
+print(t)
+# (2, 1)
+
+quot, rem = divmod(7, 3)
+print(quot)
+# 2
+
+print(rem)
+# 1
+```
+
+4. Ejemplo: Calcular el mayor y el menor elemento en una secuencia:
+
+```python
+def min_max(s):
+  return min(s), max(s)
+```
+
+---
+### 4. Funciones con numero de argumentos variables
