@@ -200,3 +200,76 @@ print(sum(1, 2, 3))
 
 ---
 ### 5. Listas y tuplas
+
+1. Función `zip`: Toma dos o más secuencias y las intercala (como un cierre en la ropa).
+
+```python
+s = 'abc'
+t = [0, 1, 2]
+z = zip(s, t)
+print(z)
+# <zip object at 0x7f7d0a9e7c48>
+```
+
+2. El objeto sabe como *iterar*, su uso más común es en un ciclo `for`:
+
+```python
+for pair in zip(s, t):
+  print(pair)
+```
+
+3. Un objeto zip, es una clase de **iterador**, este va iterando sobre una secuencia. Son similares a las listas pero no se puede acceder a sus elementos por su índice.
+
+4. Convertir objeto zip a lista:
+
+```python
+l = list(zip(s, t))
+print(l)
+# [('a', 0), ('b', 1), ('c', 2)]
+```
+
+5. Hacer zip a secuencias de distinto tamaño.
+
+```python
+l = list(zip('Anne', 'Elk'))
+print(l)
+# [('A', 'E'), ('n', 'l'), ('n', 'k')]
+```
+
+6. Asignación estilo tupla en `for`.
+
+```python
+t = [('a', 0), ('b', 1), ('c', 2)]
+for letter, number in t:
+  print(number, letter)
+
+# 0 a
+# 1 b
+# 2 c
+```
+
+7. Atravesar dos secuencias al mismo tiempo (`for`, `zip`, `tuple assigment`).
+
+```python
+def has_match(t1, t2):
+  """
+  Toma dos secuencias t1 y t2, regresa True si hay algún índice i tal que t1[i] == t2[i]
+  """
+  for x, y in zip(t1, t2):
+    if x == y:
+      return True
+  return False
+```
+
+8. Función `enumerate`: crea un objeto enumerate, que tiene tuplas con índices y elementos.
+
+```python
+for index, element in enumerate('abc'):
+  print(index, element)
+# 0 a
+# 1 b
+# 2 c
+```
+
+---
+### 6. Diccionarios y tuplas
