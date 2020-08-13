@@ -274,6 +274,63 @@ for index, element in enumerate('abc'):
 ---
 ### 6. Diccionarios y tuplas
 
+1. Método de diccionario: `items`. Regresa una secuencia de tuplas, con pares llave-valor.
+
+```python
+d = {'a':0, 'b':1, 'c':2}
+t = d.items()
+
+
+print(t)
+# dict_items([('c', 2), ('a', 0), ('b', 1)])
+```
+
+2. Usado en un `for`:
+
+```python
+for key, value in d.items():
+  print(key, value)
+
+# c 2
+# a 0
+# b 1
+```
+
+3. Construir un diccionario a partir de una secuencia de tuplas.
+
+```python
+t = [('a', 0), ('c', 2), ('b', 1)]
+d = dict(t)
+print(d)
+# {'a': 0, 'c': 2, 'b': 1}
+```
+
+4. Ayudandonos de `zip`
+
+```python
+d = dict(zip('abc', range(3)))
+print(d)
+# {'a': 0, 'c': 2, 'b': 1}
+```
+
+5. Método de diccionarios `update`. Acepta mismos parámetros que `dict`.
+
+6. Usar tuplas como llaves.
+
+```python
+directory = dict()
+fname = "John"
+lname = "Doe"
+number = "5566778899"
+directory[lname, fname] = number
+
+for last, name in directory:
+  print(name, last, directory[last, name])
+```
+
+---
+### 7. Secuencias de secuencias
+
 ---
 ## Tarea:
 
