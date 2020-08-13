@@ -388,3 +388,20 @@ structshape(d)
 
 ### Ej. 1:
 Escribe una función llamada `most_frequent` que tome un string e imprima las letras en orden decreciente de frecuencia.
+
+### Ej. 2:
+
+1. Escribe un programa que lea una lista de palabras de un archivo, e imprima todas las palabras que son anagramas.
+
+Aquí hay un ejemplo de cómo se verían algunas palabras en pantalla:
+
+```python
+['deltas', 'desalt', 'lasted', 'salted', 'slated', 'staled']
+['retainers', 'ternaries']
+['generating', 'greatening']
+['resmelts', 'smelters', 'termless']
+```
+
+2. Modifica el programa anterior para que imprima la lista más larga de anagramas primero, seguido de la segunda, y así sucesivamente.
+
+3. En Scrabble, un scrabble es cuando juegas todas las letras que tienes en una sola tirada (junto a otra letra en el tablero) para formar una palabra de 8 letras. ¿Qué colección de 8 letras forma la mayor cantidad de scrabbles?
