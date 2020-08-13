@@ -163,3 +163,40 @@ def min_max(s):
 
 ---
 ### 4. Funciones con numero de argumentos variables
+
+1. El perador `*`(en los parámetros de la función) recolecta (**gathers**) los argumentos en una tupla.
+
+```python
+def print_all(*args):
+  print(args)
+
+print_all(1, 2.0, '3')
+# (1, 2.0, '3')
+```
+
+> **Nota:** Por convención la tupla se le llama `args`, pero puede tener cualquier otro nombre.
+
+2. El complemento de gathers es **scatter** (dispersa).
+
+```python
+t = (7, 3)
+quot, rem = divmod(t)
+# TypeError: divmod expected 2 arguments, got 1
+
+quot, rem = divmod(*t)
+```
+
+3. Algunas funciones de python aceptan múltiples argumentos.
+
+```python
+print(max(1, 2, 3))
+# 3
+
+print(sum(1, 2, 3))
+# TypeError: sum expected at most 2 arguments, got 3
+```
+
+4. Ejercicio: función `sum_all` que tome cualquier número de argumentos y regrese la suma de estos.
+
+---
+### 5. Listas y tuplas
