@@ -405,3 +405,6 @@ Aquí hay un ejemplo de cómo se verían algunas palabras en pantalla:
 2. Modifica el programa anterior para que imprima la lista más larga de anagramas primero, seguido de la segunda, y así sucesivamente.
 
 3. En Scrabble, un scrabble es cuando juegas todas las letras que tienes en una sola tirada (junto a otra letra en el tablero) para formar una palabra de 8 letras. ¿Qué colección de 8 letras forma la mayor cantidad de scrabbles?
+
+### Ej. 3:
+Dos palabras forman un **par metátesis** si puedes transformar una palabra en la otra intercambiando dos letras; por ejemplo "converse" y "conserve". Escribe un programa que encuentre todos los pares metátesis de la lista de palábras. **Pista:** No hagas todos los pares posibles de palabras y no revises todos los intercambios de letras posibles.
