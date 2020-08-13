@@ -199,4 +199,7 @@ print(sum(1, 2, 3))
 4. Ejercicio: función `sum_all` que tome cualquier número de argumentos y regrese la suma de estos.
 
 ---
-### 5. Listas y tuplas
+## Tarea:
+
+### Ej. 1:
+Escribe una función llamada `most_frequent` que tome un string e imprima las letras en orden decreciente de frecuencia.
