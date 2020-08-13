@@ -331,6 +331,28 @@ for last, name in directory:
 ---
 ### 7. Secuencias de secuencias
 
+1. En muchos de los ejemplos se puede usar listas de listas o tuplas de tuplas.
+
+2. Strings:
+  - Limitadas a que sus elementos sean caracteres.
+  - Son inmutables-
+  - Si se quieren modificar sus caracteres lo mejor es usar una lista de caracteres.
+
+3. Listas:
+  - Son mutables.
+  - No pueden ser usadas como llaves en diccionarios.
+
+4. Tuplas:
+  - Se pueden usar en una expresión `return` de una forma más sencilla que las listas.
+  - Pueden ser usadas como llaves en diccionarios.
+  - Pueden usarse para pasar múltiples argumentos a una función.
+  - Son inmutables y por lo tanto no tienen metodos `sort` y `reverse` (que las modifica).
+
+> **Nota:** Python tiene funciones `sorted` y `reversed` que acepta como parámetro cualquier tipo de secuencia y regresa una copia ordenada o un iterador que recorre la secuencia en reversa, respectivamente.
+
+---
+### 8. Debugging
+
 ---
 ## Tarea:
 
