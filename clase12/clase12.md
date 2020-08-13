@@ -273,3 +273,9 @@ for index, element in enumerate('abc'):
 
 ---
 ### 6. Diccionarios y tuplas
+
+---
+## Tarea:
+
+### Ej. 1:
+Escribe una función llamada `most_frequent` que tome un string e imprima las letras en orden decreciente de frecuencia.
