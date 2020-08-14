@@ -1,4 +1,5 @@
-
+def sum_all(*args):
+    return sum(args)
 
 assert sum_all(1, 2, 3) == 6
 assert sum_all(3) == 3
