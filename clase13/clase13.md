@@ -33,6 +33,7 @@ s.translate(get_table())
 
 3. Ejercicio: Alternativas con `strip` y `replace`.
 
+---
 ### 2. Números aleatorios
 
 1. Determinismo y no determinismo.
@@ -70,6 +71,19 @@ for i in range(10):
 3
 ```
 
+5. Ejercicio: Escribe una función llamada `choose_from_hist` que tome un histograma (como los que ya hemos definido antes), y regrese una llave aleatoria del histograma, escogida con probabilidad en proporción a la frecuencia. Por ejemplo:
+
+```python
+t = ['a', 'a', 'b']
+hist = histograma(t)
+print(hist)
+# {'a': 2, 'b': 1}
+
+# Debe elegir 'a' con probabilidad 2/3 y 'b' con probabilidad 1/3
+choosen = choose_from_hist(hist)
+```
+
+---
 ## Tarea:
 
 ### Ej. 1:
@@ -77,6 +91,7 @@ Escribe un programa que lea un archivo, descomponga cada línea en palabras, qui
 
 **Pista:** Algunos métodos que tal vez te puedan ayudar son: `strip`, `replace` y `translate`. También te puedes ayudar del módulo `string`.
 
+---
 ### Ej. 2:
 Ve al [Porjecto Gutenberg](http://gutenberg.org) y descarga algún libro en formato txt.
 
@@ -86,6 +101,7 @@ Luego modifica tu programa para contar el número total de palabras en el libro 
 
 Modifica el programa para que ahora imprima el número de palabras diferentes usadas en el libro. Compara esto con otros dos libros distintos. ¿En qué libro se ocupa un vocabulario más extenso?
 
+---
 ### Ej. 3:
 Modifica el programa anterior para imprimir las 20 palábras más usadas en el libro.
 
