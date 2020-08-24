@@ -28,7 +28,10 @@ def get_table():
   return table
 
 s = "¿Cómo has estado, amigo?\nEspero que bien."
-s.translate(get_table())
+a = s.translate(get_table())
+print(a)
+# ¿Cómo has estado  amigo
+# Espero que bien
 ```
 
 3. Ejercicio: Alternativas con `strip` y `replace`.
@@ -103,6 +106,6 @@ Modifica el programa para que ahora imprima el número de palabras diferentes us
 
 ---
 ### Ej. 3:
-Modifica el programa anterior para imprimir las 20 palábras más usadas en el libro.
+Modifica el programa anterior para imprimir las 20 palabras más usadas en el libro.
 
 Vuelve a modificar el programa para que lea el archivo `words.txt` e imprima todas las palabras en el libro que no están en la lista de palabras.

@@ -7,4 +7,5 @@ def get_table():
     return table
 
 s = "¿Cómo has estado, amigo?\nEspero que bien."
-s.translate(get_table())
+a = s.translate(get_table())
+print(a)
