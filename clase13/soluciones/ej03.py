@@ -1,9 +1,8 @@
 from random import choice, randint
 from bisect import bisect
 
-def markov_analysis(file_path, length=2):
+def markov_analysis(file_path, length=2, mapping=dict()):
     fin = open(file_path)
-    mapping = dict()
     prefix = init_prefix(length)
     for line in fin:
         words = line.split()
@@ -23,36 +22,31 @@ def add_value(d, k, v):
     freq = d.setdefault(k, dict())
     freq[v] = freq.get(v, 0) + 1
 
-def cum_sum(l):
-    cum = 0
-    res = []
-    for i in l:
-        cum += i
-        res.append(cum)
-    return res
-
-def choose_from_hist(h):
-    words = list(h.keys())
-    cum = cum_sum(h.values())
-    total = sum(h.values())
-    index = bisect(cum, randint(0, total-1))
-    return words[index]
+def choice_key(d):
+    return choice(list(d.keys()))
 
 def make_sentence(mapping, length=50):
-    prefix = choice(list(mapping.keys()))
-    sentence = list(prefix)
+    prefix = choice_key(mapping)
+    sentence = " ".join(list(prefix))
     for i in range(length):
         if prefix not in mapping:
-            break
-        word = choose_from_hist(mapping[prefix])
-        sentence.append(word)
+            prefix = choice_key(mapping)
+        word = choice_key(mapping[prefix])
+        sentence += " " + word
         prefix = shift(prefix, word)
-    return " ".join(sentence)
+    return sentence
 
 def print_dict(d):
     for k, v in d.items():
         print(k, v, sep=": ")
 
-path = "files/quijote.txt"
-mapping = markov_analysis(path, 3)
-print(make_sentence(mapping, 500))
+def main():
+    files = ["quijote", "noches", "venezuela1"]
+    mapping = dict()
+    for file in files:
+        path = "files/%s.txt" % file
+        markov_analysis(path, 3, mapping)
+    print(make_sentence(mapping, 50))
+
+if __name__ == "__main__":
+    main()
