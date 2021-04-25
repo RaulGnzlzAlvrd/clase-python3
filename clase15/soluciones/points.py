@@ -4,13 +4,14 @@ class Point:
     """ Representación de un punto en un espacio 2D """
 
 def print_point(p):
+    """ Imprime las coordenadas del punto p"""
     print("(%g, %g)" % (p.x, p.y))
 
 def distance(p1, p2):
+    """ Regresa la distancia entre los puntos p1 y p2 """
     dx = p2.x - p1.x
     dy = p2.y - p1.y
     return math.sqrt(dx**2 + dy**2)
-
 
 if __name__ == "__main__":
     p1 = Point()

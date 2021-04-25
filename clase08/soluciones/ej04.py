@@ -25,4 +25,5 @@ def rotate_word(word, displacement):
         new = new + rotate_letter(letter, displacement)
     return new
 
-print(rotate_word("melon", -10))
+print(rotate_word("si pau, nos vemos pasado mañana", 2))
+print(rotate_word("uk rcw, pqu xgñqu rcucfq ñcpcoc ", -2))

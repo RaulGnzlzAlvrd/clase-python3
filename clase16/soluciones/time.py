@@ -8,9 +8,11 @@ class Time:
     """
 
 def print_time(t):
+    """ Imprime time t en formato hora:minuto:segundo """
     print("%.2d:%.2d:%.2d" % (t.hour, t.minute, t.second))
 
 def is_after(t1, t2):
+    """ Regresa True si t1 ocurre después de t2 """
     c1 = t1.hour > t2.hour
     c2 = t1.hour == t2.hour and t1.minute > t2.minute
     c3 = t1.hour == t2.hour and t1.minute == t2.minute and t1.second > t2.second
