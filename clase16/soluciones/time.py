@@ -75,11 +75,22 @@ def valid_time(t):
         return False
     return True
 
+def mul_time(time, times):
+    """ Toma time y regresa un time equivalente a time multiplicado times veces """
+    if not valid_time(time):
+        raise ValueError('invalid Time object in mul_time')
+    return int_to_time(time_to_int(time) * times)
+
+def avg_time(time, distance):
+    """ Regresa un time que es la velocidad promedio de tiempo por millas """
+    assert valid_time(time)
+    return mul_time(time, 1/distance)
+
 if __name__ == '__main__':
     time = Time()
     time.hour = 11
     time.minute = 1
-    time.second = 65
+    time.second = 5
 
     time3 = add_time(time, time)
     print_time(time3)
@@ -107,3 +118,5 @@ if __name__ == '__main__':
 
     increment(time4, 120 * 60)
     print_time(time4)
+
+    print_time(mul_time(time5, 2))
