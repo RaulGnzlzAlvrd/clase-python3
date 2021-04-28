@@ -15,11 +15,9 @@ def print_time(time):
 def is_after(t1, t2):
     """ Regresa True si t1 ocurre después que t2 """
     assert valid_time(t1) and valid_time(t2)
-    c1 = t1.hour > t2.hour
-    a1 = t1.hour == t2.hour
-    c2 = a1 and t1.minute > t2.minute
-    c3 = a1 and t1.minute == t2.minute and t1.second > t2.second
-    return c1 or c2 or c3 
+    n1 = time_to_int(t1)
+    n2 = time_to_int(t2)
+    return n1 < n2
 
 def add_time(t1, t2):
     """ Toma dos time t1 y t2, y regresa un time que es la suma de t1 y t2 """
