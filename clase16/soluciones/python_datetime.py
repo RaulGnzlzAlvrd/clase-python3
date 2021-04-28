@@ -39,11 +39,10 @@ def double_day(b1, b2):
 def n_day(b1, b2, n):
     """ Regresa el día en el que es el día n times de alguien que nació en b1 y otro en b2 """
     s = sorted([b1, b2])
-    b = s[0] - datetime.min
-    a = s[1] - datetime.min
+    a = s[1] - s[0]
 
-    diff = (b - (a * n)) / (1 - n)
-    return datetime.min + diff
+    diff = (-a * n) / (1 - n)
+    return s[0] + diff
 
 if __name__ == '__main__':
     print('Día de la semana actual: ', end='')
