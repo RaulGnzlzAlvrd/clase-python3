@@ -12,7 +12,7 @@ License: http://creativecommons.org/licenses/by/4.0/
 class Time:
     """Represents the time of day.
 
-    attributes: hour, minute, second
+    attributes: second
     """
     def __init__(self, hour=0, minute=0, second=0):
         """Initializes a time object.
@@ -21,13 +21,18 @@ class Time:
         minute: int
         second: int or float
         """
-        self.hour = hour
-        self.minute = minute
-        self.second = second
+        minutes = hour * 60 + minute
+        self.second = minutes * 60 + second
 
     def __str__(self):
         """Returns a string representation of the time."""
-        return '%.2d:%.2d:%.2d' % (self.hour, self.minute, self.second)
+        return '%.2d:%.2d:%.2d' % self.get_hms_representation()
+
+    def get_hms_representation(self):
+        """Returns a tuple with the representation of time in hours, minutes and seconds"""
+        minute, second = divmod(self.second, 60)
+        hour, minute = divmod(minute, 60)
+        return (hour, minute, second)
 
     def print_time(self):
         """Prints a string representation of the time."""
@@ -35,13 +40,11 @@ class Time:
 
     def time_to_int(self):
         """Computes the number of seconds since midnight."""
-        minutes = self.hour * 60 + self.minute
-        seconds = minutes * 60 + self.second
-        return seconds
+        return self.second
 
     def is_after(self, other):
         """Returns True if t1 is after t2; false otherwise."""
-        return self.time_to_int() > other.time_to_int()
+        return self.second > other.second
 
     def __add__(self, other):
         """Adds two Time objects or a Time object and a number.
@@ -60,19 +63,19 @@ class Time:
     def add_time(self, other):
         """Adds two time objects."""
         assert self.is_valid() and other.is_valid()
-        seconds = self.time_to_int() + other.time_to_int()
-        return int_to_time(seconds)
+        seconds = self.second + other.second
+        return Time(second=seconds)
 
     def increment(self, seconds):
         """Returns a new Time that is the sum of this time and seconds."""
-        seconds += self.time_to_int()
-        return int_to_time(seconds)
+        seconds += self.second
+        return Time(second=seconds)
 
     def is_valid(self):
         """Checks whether a Time object satisfies the invariants."""
-        if self.hour < 0 or self.minute < 0 or self.second < 0:
+        if self.second < 0:
             return False
-        if self.minute >= 60 or self.second >= 60:
+        if not isinstance(self.second, float) and not isinstance(self.second, int):
             return False
         return True
 
@@ -82,10 +85,7 @@ def int_to_time(seconds):
 
     seconds: int seconds since midnight.
     """
-    minutes, second = divmod(seconds, 60)
-    hour, minute = divmod(minutes, 60)
-    time = Time(hour, minute, second)
-    return time
+    return Time(second=seconds)
 
 
 def main():
