@@ -35,6 +35,11 @@ class Time:
         assert self.valid_time() and self.valid_time()
         return self.time_to_int() > other.time_to_int()
 
+    def __lt__(self, other):
+        """ Regresa True si ocurre antes que other """
+        assert self.valid_time() and self.valid_time()
+        return self.time_to_int() < other.time_to_int()
+
     def valid_time(self):
         """ Verifica que sea un time válido
 
