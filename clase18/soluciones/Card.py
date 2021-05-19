@@ -52,6 +52,15 @@ class Deck:
         for i in range(num):
             hand.add_card(self.pop_card())
 
+    def deal_hands(self, nhands, ncards):
+        """ Regresa una lista de Hands de tamaño nhands con ncards cada una """
+        res = []
+        for i in range(nhands):
+            hand = Hand()
+            self.move_cards(hand, ncards)
+            res.append(hand)
+        return res
+
 class Hand(Deck):
     def __init__(self, label=''):
         self.label = label
@@ -81,3 +90,9 @@ if __name__ == '__main__':
 
     print('*'*10)
     print(mi_mano)
+
+    print('*'*10)
+    manos = deck.deal_hands(3, 5)
+    for mano in manos:
+        print(mano)
+        print('*'*10)
